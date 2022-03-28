@@ -1,5 +1,6 @@
 import "./App.css";
 import Tweet from "./components/Tweet";
+import { nanoid } from "nanoid";
 
 const tweetsArray = [
   {
@@ -37,8 +38,8 @@ const tweetsArray = [
 function App() {
   return (
     <div className="App">
-      {tweetsArray.map((elem, index) => {
-       return <Tweet tweet={ elem } key= {index} />
+      {tweetsArray.map((elem) => {
+       return <Tweet tweet={ elem } key= { nanoid()} />
       })}
       {/* <Tweet tweet={ tweetsArray[0] } />
       <Tweet tweet={ tweetsArray[1] } />
